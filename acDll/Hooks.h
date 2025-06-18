@@ -2,7 +2,7 @@
 #include <iostream>
 struct Hook
 {
-private:
+
 	//hook Head
 	BYTE* hookPosition{ nullptr };
 	BYTE stolenBytes[20]{ 0 };
@@ -23,7 +23,7 @@ private:
 	DWORD hookToDetourJump;
 	DWORD returnJumpDetour;
 
-public:
+
 	void ToggleTrampSBF();
 	void ToggleTrampSBL();
 	void ToogleDetour();

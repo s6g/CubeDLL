@@ -14,18 +14,36 @@ void MainHackLoop()
 
 	player->health = 7002;
 	player->mtpReserve = 1000;
-	player->Recoil = 0;
 	player->shield = 1337;
 	player->grenade = 99;
 
 
-	std::cout << "Over Write Successfull !\n";
-
 	if (GetAsyncKeyState(VK_F1) & 1)
 	{
 		mainHackLoopTramp.ToggleTrampSBF();
-		//infAmmoDetour.ToogleDetour();
-		nopAmmo.ToggleNop();
 		bBreakHackThreadWhileLoop = true;
 	}
+
+	if (GetAsyncKeyState(VK_F2) & 1)
+	{
+		if (infAmmoDetour.bActive) { infAmmoDetour.ToogleDetour(); Sleep(100);}
+		nopAmmo.ToggleNop();
+		std::cout << "Nop Status: " << (nopAmmo.bActive ? "Active" : "Not Active") << std::endl;
+	}
+	
+	if (GetAsyncKeyState(VK_F3) & 1)
+	{
+		if (nopAmmo.bActive) { nopAmmo.ToggleNop(); Sleep(100); }
+		infAmmoDetour.ToogleDetour();
+		std::cout << "Detour Status: " << (infAmmoDetour.bActive ? "Active" : "Not Active") << std::endl;
+	}
+
+	if (GetAsyncKeyState(VK_F4) & 1)
+	{
+		nopRecoil.ToggleNop();
+		nopReCoil.ToggleNop();
+		nopHardCoil.ToggleNop();
+		std::cout << "Recoil Status: " << (nopRecoil.bActive ? "Active" : "Not Active") << std::endl;
+	}
+	
 }

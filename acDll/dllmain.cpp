@@ -15,15 +15,17 @@ DWORD WINAPI HackThread(HMODULE hModule)
     freopen_s(&f, "CONOUT$", "w", stdout); //file pointer address, -, write permission, print output
 
     SetupHooksAndNops();
-
-    mainHackLoopTramp.ToggleTrampSBF();
-    // infAmmoDetour.ToogleDetour();
-    nopAmmo.ToggleNop();
+    mainHackLoopTramp.ToggleTrampSBF(); 
+    
+    std::cout << "Press F1 To Detach\nPress F2 To Infinite Amo\nPress F3 To Increasing Ammo\nPress F4 To No Recoil" << std::endl;
 
     while (!bBreakHackThreadWhileLoop)
     {
 
     }
+
+    if (infAmmoDetour.bActive) { infAmmoDetour.ToogleDetour(); }
+    if (nopAmmo.bActive) { nopAmmo.ToggleNop(); }
 
     fclose(f);
     FreeConsole();
