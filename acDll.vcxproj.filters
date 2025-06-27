@@ -1,10 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
     <Filter Include="Hook">
       <UniqueIdentifier>{43bf5680-6294-4347-8006-2bbf6f48ff4e}</UniqueIdentifier>
     </Filter>
@@ -24,48 +20,51 @@
     <Filter Include="Setup Function">
       <UniqueIdentifier>{483b3019-e522-4720-af59-36ec7c2d9586}</UniqueIdentifier>
     </Filter>
+    <Filter Include="PCH">
+      <UniqueIdentifier>{0db013d3-b009-4073-8ad3-622d651d074a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="framework.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="pch.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Hooks.h">
-      <Filter>Hook</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayerInfo.h">
-      <Filter>Offsets</Filter>
-    </ClInclude>
-    <ClInclude Include="setupHooksAndNops.h">
-      <Filter>Setup Function</Filter>
-    </ClInclude>
-    <ClInclude Include="MainHackLoop.h">
-      <Filter>MAIN HACK FUNCTION</Filter>
-    </ClInclude>
-    <ClInclude Include="InfAmmo.h">
-      <Filter>InfAmmo Function</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="dllmain.cpp">
+    <ClCompile Include="src\dllmain.cpp">
       <Filter>Main DLL</Filter>
     </ClCompile>
-    <ClCompile Include="Hooks.cpp">
+    <ClCompile Include="src\Hooks.cpp">
       <Filter>Hook</Filter>
     </ClCompile>
-    <ClCompile Include="pch.cpp">
-      <Filter>Header Files</Filter>
-    </ClCompile>
-    <ClCompile Include="setupHooksAndNops.cpp">
-      <Filter>Setup Function</Filter>
-    </ClCompile>
-    <ClCompile Include="MainHackLoop.cpp">
-      <Filter>MAIN HACK FUNCTION</Filter>
-    </ClCompile>
-    <ClCompile Include="InfAmmo.cpp">
+    <ClCompile Include="src\InfAmmo.cpp">
       <Filter>InfAmmo Function</Filter>
     </ClCompile>
+    <ClCompile Include="src\MainHackLoop.cpp">
+      <Filter>MAIN HACK FUNCTION</Filter>
+    </ClCompile>
+    <ClCompile Include="src\setupHooksAndNops.cpp">
+      <Filter>Setup Function</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pch.cpp">
+      <Filter>PCH</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\Hooks.h">
+      <Filter>Hook</Filter>
+    </ClInclude>
+    <ClInclude Include="include\InfAmmo.h">
+      <Filter>InfAmmo Function</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MainHackLoop.h">
+      <Filter>MAIN HACK FUNCTION</Filter>
+    </ClInclude>
+    <ClInclude Include="include\PlayerInfo.h">
+      <Filter>Offsets</Filter>
+    </ClInclude>
+    <ClInclude Include="include\setupHooksAndNops.h">
+      <Filter>Setup Function</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pch.h">
+      <Filter>PCH</Filter>
+    </ClInclude>
+    <ClInclude Include="include\framework.h">
+      <Filter>PCH</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
