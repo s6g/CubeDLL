@@ -6,14 +6,13 @@ bool bBreakHackThreadWhileLoop = false;
 void PrintConsole()
 {
 	system("cls");
-	std::cout << "Press End To Detach\n";
+	system("");
+	std::cout << "Press" << COLORS::YELLOW << " End " << COLORS::RESET << "To Detach\n";
 	std::cout << "Press F1 To Infinite Ammo\n";
 	std::cout << "Press F2 To No Recoil\n";
 	std::cout << "------------------------------------------------------\n";
-	std::cout << "Infinite Ammo: " << (nopAmmo.bActive ? "Active" : "Not Active") << "\n";
-	std::cout << "Recoil : " << (nopRecoil.bActive ? "Active" : "Not Active") << "\n";
-
-
+	std::cout << "Infinite Ammo: " << (nopAmmo.bActive ? COLORS::GREEN:COLORS::RED) << (nopAmmo.bActive ? "Active" : "Not Active") << COLORS::RESET << "\n";
+	std::cout << "Recoil: " << (nopRecoil.bActive ? COLORS::GREEN : COLORS::RED) << (nopRecoil.bActive ? "Active" : "Not Active") << COLORS::RESET << "\n";
 }
 
 void GetInput()
