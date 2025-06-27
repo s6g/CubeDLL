@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35931.197 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "acDll", "acDll\acDll.vcxproj", "{E746E3B1-FFD3-40B4-9A6A-00A2CBA80CE4}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "acDll", "acDll.vcxproj", "{E746E3B1-FFD3-40B4-9A6A-00A2CBA80CE4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +26,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {D4EFFF2E-919D-481E-9892-406BEF086611}
+		SolutionGuid = {D67FA303-A00F-4931-8C2D-01B49131EC9E}
 	EndGlobalSection
 EndGlobal

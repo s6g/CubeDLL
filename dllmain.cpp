@@ -26,6 +26,7 @@ DWORD WINAPI HackThread(HMODULE hModule)
 
     if (infAmmoDetour.bActive) { infAmmoDetour.ToogleDetour(); }
     if (nopAmmo.bActive) { nopAmmo.ToggleNop(); }
+    if (nopRecoil.bActive) { nopRecoil.bActive; }
 
     fclose(f);
     FreeConsole();

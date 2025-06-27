@@ -2,10 +2,11 @@ e:\cpp\injector\acdll\acdll\debug\acdll.pch
 e:\cpp\injector\acdll\acdll\debug\vc143.pdb
 e:\cpp\injector\acdll\acdll\debug\vc143.idb
 e:\cpp\injector\acdll\acdll\debug\pch.obj
-e:\cpp\injector\acdll\acdll\debug\hooks.obj
-e:\cpp\injector\acdll\acdll\debug\dllmain.obj
 e:\cpp\injector\acdll\acdll\debug\setuphooksandnops.obj
 e:\cpp\injector\acdll\acdll\debug\mainhackloop.obj
+e:\cpp\injector\acdll\acdll\debug\infammo.obj
+e:\cpp\injector\acdll\acdll\debug\hooks.obj
+e:\cpp\injector\acdll\acdll\debug\dllmain.obj
 e:\cpp\injector\acdll\debug\acdll.dll
 e:\cpp\injector\acdll\debug\acdll.pdb
 e:\cpp\injector\acdll\acdll\debug\acdll.ilk

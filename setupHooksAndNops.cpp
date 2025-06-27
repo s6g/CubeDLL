@@ -27,18 +27,8 @@ void SetupHooksAndNops()
 	nopAmmo = nopAmmoTemp;
 
 	//ac_client.exe+62223E 18 BYTE
-	BYTE* nopRecoilDst = moduleBaseAssaultCube + 0x6223E;
+	BYTE* nopRecoilDst = moduleBaseAssaultCube + 0x6223E; //Good
 	Nop nopRecoilTemp(nopRecoilDst, 18);
 	nopRecoil = nopRecoilTemp;
 
-	//ac_client.exe+621E4 3 BYTE
-	BYTE* nopHardCoilDst = moduleBaseAssaultCube + 0x621E4;
-	Nop nopHardCoilTemp(nopHardCoilDst, 3);
-	nopHardCoil = nopHardCoilTemp;
-
-	//ac_client.exe+622AC 3 BYTE
-	BYTE* nopReCoilDst = moduleBaseAssaultCube + 0x622AC;
-	Nop nopReCoilTemp(nopReCoilDst, 3);
-	nopReCoil = nopReCoilTemp;
-	//ac_client.exe+29D1F GODMODE
 }

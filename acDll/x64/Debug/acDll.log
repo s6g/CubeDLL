@@ -1,3 +1,70 @@
 ﻿  pch.cpp
   dllmain.cpp
-  acDll.vcxproj -> E:\CPP\Injector\acDll\x64\Debug\acDll.dll
+  Hooks.cpp
+E:\CPP\Injector\acDll\Hooks.cpp(15,15): warning C4311: 'type cast': pointer truncation from 'BYTE *' to 'DWORD'
+  (compiling source file '/Hooks.cpp')
+  
+E:\CPP\Injector\acDll\Hooks.cpp(15,15): warning C4302: 'type cast': truncation from 'BYTE *' to 'DWORD'
+  (compiling source file '/Hooks.cpp')
+  
+E:\CPP\Injector\acDll\Hooks.cpp(15,54): warning C4311: 'type cast': pointer truncation from 'BYTE *' to 'DWORD'
+  (compiling source file '/Hooks.cpp')
+  
+E:\CPP\Injector\acDll\Hooks.cpp(15,54): warning C4302: 'type cast': truncation from 'BYTE *' to 'DWORD'
+  (compiling source file '/Hooks.cpp')
+  
+E:\CPP\Injector\acDll\Hooks.cpp(18,21): warning C4311: 'type cast': pointer truncation from 'BYTE *' to 'DWORD'
+  (compiling source file '/Hooks.cpp')
+  
+E:\CPP\Injector\acDll\Hooks.cpp(18,21): warning C4302: 'type cast': truncation from 'BYTE *' to 'DWORD'
+  (compiling source file '/Hooks.cpp')
+  
+E:\CPP\Injector\acDll\Hooks.cpp(37,21): warning C4311: 'type cast': pointer truncation from 'BYTE *' to 'DWORD'
+  (compiling source file '/Hooks.cpp')
+  
+E:\CPP\Injector\acDll\Hooks.cpp(37,21): warning C4302: 'type cast': truncation from 'BYTE *' to 'DWORD'
+  (compiling source file '/Hooks.cpp')
+  
+E:\CPP\Injector\acDll\Hooks.cpp(37,46): warning C4311: 'type cast': pointer truncation from 'BYTE *' to 'DWORD'
+  (compiling source file '/Hooks.cpp')
+  
+E:\CPP\Injector\acDll\Hooks.cpp(37,46): warning C4302: 'type cast': truncation from 'BYTE *' to 'DWORD'
+  (compiling source file '/Hooks.cpp')
+  
+E:\CPP\Injector\acDll\Hooks.cpp(78,21): warning C4311: 'type cast': pointer truncation from 'BYTE *' to 'DWORD'
+  (compiling source file '/Hooks.cpp')
+  
+E:\CPP\Injector\acDll\Hooks.cpp(78,21): warning C4302: 'type cast': truncation from 'BYTE *' to 'DWORD'
+  (compiling source file '/Hooks.cpp')
+  
+E:\CPP\Injector\acDll\Hooks.cpp(78,46): warning C4311: 'type cast': pointer truncation from 'BYTE *' to 'DWORD'
+  (compiling source file '/Hooks.cpp')
+  
+E:\CPP\Injector\acDll\Hooks.cpp(78,46): warning C4302: 'type cast': truncation from 'BYTE *' to 'DWORD'
+  (compiling source file '/Hooks.cpp')
+  
+  InfAmmo.cpp
+E:\CPP\Injector\acDll\InfAmmo.cpp(5,17): error C2485: '__declspec(identifier)' is not a recognized extended attribute
+  (compiling source file '/InfAmmo.cpp')
+  
+E:\CPP\Injector\acDll\InfAmmo.cpp(7,2): error C4235: nonstandard extension used: '__asm' keyword not supported on this architecture
+  (compiling source file '/InfAmmo.cpp')
+  
+E:\CPP\Injector\acDll\InfAmmo.cpp(9,3): error C2065: 'mov': undeclared identifier
+  (compiling source file '/InfAmmo.cpp')
+  
+E:\CPP\Injector\acDll\InfAmmo.cpp(9,7): error C2146: syntax error: missing ';' before identifier 'esi'
+  (compiling source file '/InfAmmo.cpp')
+  
+E:\CPP\Injector\acDll\InfAmmo.cpp(9,7): error C2065: 'esi': undeclared identifier
+  (compiling source file '/InfAmmo.cpp')
+  
+E:\CPP\Injector\acDll\InfAmmo.cpp(9,17): error C2760: syntax error: '+' was unexpected here; expected ','
+  (compiling source file '/InfAmmo.cpp')
+  
+E:\CPP\Injector\acDll\InfAmmo.cpp(9,23): error C2059: syntax error: ']'
+  (compiling source file '/InfAmmo.cpp')
+  
+  MainHackLoop.cpp
+  setupHooksAndNops.cpp
+  Generating Code...
