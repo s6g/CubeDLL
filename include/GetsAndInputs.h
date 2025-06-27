@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include "MainHackLoop.h"
+#include "ConsoleColors.h"
 
 extern bool bBreakHackThreadWhileLoop;
 

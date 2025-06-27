@@ -66,5 +66,6 @@
     <ClInclude Include="include\GetsAndInputs.h">
       <Filter>Setup Function</Filter>
     </ClInclude>
+    <ClInclude Include="include\ConsoleColors.h" />
   </ItemGroup>
 </Project>
