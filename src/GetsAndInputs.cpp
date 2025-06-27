@@ -6,7 +6,6 @@ bool bBreakHackThreadWhileLoop = false;
 void PrintConsole()
 {
 	system("cls");
-	system("");
 	std::cout << "Press" << COLORS::YELLOW << " End " << COLORS::RESET << "To Detach\n";
 	std::cout << "Press F1 To Infinite Ammo\n";
 	std::cout << "Press F2 To No Recoil\n";
