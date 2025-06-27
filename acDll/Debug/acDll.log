@@ -1,8 +1,0 @@
-﻿  pch.cpp
-  dllmain.cpp
-  Hooks.cpp
-  InfAmmo.cpp
-  MainHackLoop.cpp
-  setupHooksAndNops.cpp
-  Generating Code...
-  acDll.vcxproj -> E:\CPP\Injector\acDll\Debug\acDll.dll
