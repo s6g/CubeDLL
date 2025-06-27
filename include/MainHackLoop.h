@@ -2,7 +2,6 @@
 #include <iostream>
 #include "PlayerInfo.h"
 #include "setupHooksAndNops.h"
-
-extern bool bBreakHackThreadWhileLoop;
+#include "GetsAndInputs.h"
 
 void MainHackLoop();

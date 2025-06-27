@@ -25,14 +25,8 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\dllmain.cpp">
-      <Filter>Main DLL</Filter>
-    </ClCompile>
     <ClCompile Include="src\Hooks.cpp">
       <Filter>Hook</Filter>
-    </ClCompile>
-    <ClCompile Include="src\InfAmmo.cpp">
-      <Filter>InfAmmo Function</Filter>
     </ClCompile>
     <ClCompile Include="src\MainHackLoop.cpp">
       <Filter>MAIN HACK FUNCTION</Filter>
@@ -43,13 +37,16 @@
     <ClCompile Include="src\pch.cpp">
       <Filter>PCH</Filter>
     </ClCompile>
+    <ClCompile Include="src\Main.cpp">
+      <Filter>Main DLL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GetsAndInputs.cpp">
+      <Filter>Setup Function</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Hooks.h">
       <Filter>Hook</Filter>
-    </ClInclude>
-    <ClInclude Include="include\InfAmmo.h">
-      <Filter>InfAmmo Function</Filter>
     </ClInclude>
     <ClInclude Include="include\MainHackLoop.h">
       <Filter>MAIN HACK FUNCTION</Filter>
@@ -65,6 +62,9 @@
     </ClInclude>
     <ClInclude Include="include\framework.h">
       <Filter>PCH</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GetsAndInputs.h">
+      <Filter>Setup Function</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

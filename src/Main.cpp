@@ -5,31 +5,22 @@
 #include "PlayerInfo.h"
 #include "SetupHooksAndNops.h"
 #include "MainHackLoop.h"
-
+#include "GetsAndInputs.h"
 
 DWORD WINAPI HackThread(HMODULE hModule)
 {
-    //Create Console
-    FILE* f;
-    AllocConsole();
-    freopen_s(&f, "CONOUT$", "w", stdout); //file pointer address, -, write permission, print output
-
-    SetupHooksAndNops();
-    mainHackLoopTramp.ToggleTrampSBF(); 
+    ToggleConsole();
+    SetupHooksAndNops(); //Setup All Globals
+    mainHackLoopTramp.ToggleTrampSBF(); //Activate Main HACK
     
-    std::cout << "Press F1 To Detach\nPress F2 To Infinite Amo\nPress F3 To Increasing Ammo\nPress F4 To No Recoil" << std::endl;
+    PrintConsole();
 
     while (!bBreakHackThreadWhileLoop)
     {
 
     }
 
-    if (infAmmoDetour.bActive) { infAmmoDetour.ToogleDetour(); }
-    if (nopAmmo.bActive) { nopAmmo.ToggleNop(); }
-    if (nopRecoil.bActive) { nopRecoil.bActive; }
-
-    fclose(f);
-    FreeConsole();
+    ToggleConsole();
     FreeLibraryAndExitThread(hModule, 0);
     return 0;
 }
