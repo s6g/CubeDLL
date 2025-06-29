@@ -157,6 +157,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\OHE.cpp" />
     <ClCompile Include="src\GetsAndInputs.cpp" />
     <ClCompile Include="src\Hooks.cpp" />
     <ClCompile Include="src\Main.cpp" />
@@ -176,6 +177,7 @@
     <ClInclude Include="include\pch.h" />
     <ClInclude Include="include\PlayerInfo.h" />
     <ClInclude Include="include\setupHooksAndNops.h" />
+    <ClInclude Include="include\OHE.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

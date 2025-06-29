@@ -1,8 +1,8 @@
 #include "pch.h"
 #include "setupHooksAndNops.h"
 
-
 Hook mainHackLoopTramp;
+Hook OneHitEliminateDetour;
 Nop nopAmmo;
 Nop nopRecoil;
 
@@ -15,6 +15,10 @@ void SetupHooksAndNops()
 	Hook MainHackLoopTrampTemp(mainHackLoopHookDst, (BYTE*)MainHackLoop, 5);
 	mainHackLoopTramp = MainHackLoopTrampTemp;
 
+	BYTE* OneHitEliminateDst = (moduleBaseAssaultCube + 0x29D1F);
+	Hook OneHitEliminateDetourTemp(OneHitEliminateDst, (BYTE*)OneHitEliminate, 5);
+	OneHitEliminateDetour = OneHitEliminateDetourTemp;
+
 	BYTE* nopAmmoDst = moduleBaseAssaultCube + 0x637E9;
 	Nop nopAmmoTemp(nopAmmoDst, 2);
 	nopAmmo = nopAmmoTemp;
@@ -23,5 +27,5 @@ void SetupHooksAndNops()
 	BYTE* nopRecoilDst = moduleBaseAssaultCube + 0x6223E; //Good
 	Nop nopRecoilTemp(nopRecoilDst, 18);
 	nopRecoil = nopRecoilTemp;
-
+	
 }

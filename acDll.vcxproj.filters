@@ -4,9 +4,6 @@
     <Filter Include="Hook">
       <UniqueIdentifier>{43bf5680-6294-4347-8006-2bbf6f48ff4e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="InfAmmo Function">
-      <UniqueIdentifier>{ec872466-d37c-4f18-97e1-1c043bc3b3c6}</UniqueIdentifier>
-    </Filter>
     <Filter Include="MAIN HACK FUNCTION">
       <UniqueIdentifier>{c2b1f023-faf8-4c00-bffd-e5f21b7bfd19}</UniqueIdentifier>
     </Filter>
@@ -22,6 +19,9 @@
     </Filter>
     <Filter Include="PCH">
       <UniqueIdentifier>{0db013d3-b009-4073-8ad3-622d651d074a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="One Hit Elimination">
+      <UniqueIdentifier>{db1de855-f93a-4b0b-9449-6a8ac3dc4994}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -42,6 +42,9 @@
     </ClCompile>
     <ClCompile Include="src\GetsAndInputs.cpp">
       <Filter>Setup Function</Filter>
+    </ClCompile>
+    <ClCompile Include="src\OHE.cpp">
+      <Filter>One Hit Elimination</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -67,5 +70,8 @@
       <Filter>Setup Function</Filter>
     </ClInclude>
     <ClInclude Include="include\ConsoleColors.h" />
+    <ClInclude Include="include\OHE.h">
+      <Filter>One Hit Elimination</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -11,7 +11,8 @@ void PrintConsole()
 	std::cout << "Press F2 To No Recoil\n";
 	std::cout << "------------------------------------------------------\n";
 	std::cout << "Infinite Ammo: " << (nopAmmo.bActive ? COLORS::GREEN:COLORS::RED) << (nopAmmo.bActive ? "Active" : "Not Active") << COLORS::RESET << "\n";
-	std::cout << "Recoil: " << (nopRecoil.bActive ? COLORS::GREEN : COLORS::RED) << (nopRecoil.bActive ? "Active" : "Not Active") << COLORS::RESET << "\n";
+	std::cout << "Recoil: " << (nopRecoil.bActive ? COLORS::GREEN : COLORS::RED) << (nopRecoil.bActive ? "Active" : "Not Active") << COLORS::RESET << std::endl;
+	std::cout << "OHE: " << (OneHitEliminateDetour.bActive ? COLORS::GREEN : COLORS::RED) << (OneHitEliminateDetour.bActive ? "Active" : "Not Active") << COLORS::RESET << std::endl;
 }
 
 void GetInput()
@@ -32,6 +33,13 @@ void GetInput()
 	if (GetAsyncKeyState(VK_F2) & 1)
 	{
 		nopRecoil.ToggleNop();  //Stops Movement When Shooting
+		PrintConsole();
+	}
+
+	if (GetAsyncKeyState(VK_F3) & 1)
+	{
+		
+		OneHitEliminateDetour.ToogleDetour();
 		PrintConsole();
 	}
 
