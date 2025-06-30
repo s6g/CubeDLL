@@ -51,6 +51,7 @@ void BreakHack()
 	
 	if (nopAmmo.bActive) { nopAmmo.ToggleNop(); }
 	if (nopRecoil.bActive) { nopRecoil.ToggleNop(); }
+	if (OneHitEliminateDetour.bActive) { OneHitEliminateDetour.ToogleDetour(); }
 }
 
 void ToggleConsole()
