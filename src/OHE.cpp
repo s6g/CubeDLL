@@ -13,7 +13,7 @@ while ignoring teammates by hooking the original damage calculation
 and modifying the health subtraction logic conditionally
 
 The damaged player’s pointer is passed in through the EBX register
-detailed explaination ?
+detailed explaination below
 */
 
 void __declspec(naked)OneHitEliminate()
@@ -44,7 +44,7 @@ void __declspec(naked)OneHitEliminate()
 		mov ecx, [myTeam] //Take my team (it'll be either 0 or 1... we initialized to 5 cuz it doesnt exist)
 		cmp [ebx + Team], ecx  //compare the player team with mine
 		pop ecx //thank you
-		je returnJump //if he IS in my time, Jump Back (dont subtract)
+		je returnJump //if he IS in my team, Jump Back (dont subtract)
 		push ecx //appparently he's not
 		mov ecx, [ebx + 0x4] //take his health
 		sub [ebx + 0x4], ecx //subtract his health by his health -> 0
