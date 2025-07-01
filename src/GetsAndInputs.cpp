@@ -9,6 +9,7 @@ void PrintConsole()
 	std::cout << "Press" << COLORS::YELLOW << " End " << COLORS::RESET << "To Detach\n";
 	std::cout << "Press F1 To Infinite Ammo\n";
 	std::cout << "Press F2 To No Recoil\n";
+	std::cout << "Press F3 To OneHit Enemies\n";
 	std::cout << "------------------------------------------------------\n";
 	std::cout << "Infinite Ammo: " << (nopAmmo.bActive ? COLORS::GREEN:COLORS::RED) << (nopAmmo.bActive ? "Active" : "Not Active") << COLORS::RESET << "\n";
 	std::cout << "Recoil: " << (nopRecoil.bActive ? COLORS::GREEN : COLORS::RED) << (nopRecoil.bActive ? "Active" : "Not Active") << COLORS::RESET << std::endl;
@@ -38,7 +39,6 @@ void GetInput()
 
 	if (GetAsyncKeyState(VK_F3) & 1)
 	{
-		
 		OneHitEliminateDetour.ToogleDetour();
 		PrintConsole();
 	}

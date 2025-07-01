@@ -9,11 +9,11 @@ void MainHackLoop()
 	static PlayerInfo* player;
 	player = reinterpret_cast<PlayerInfo*>(*localplayer);
 
-	//player->health = 7002;
-	//player->mtpReserve = 1000;
-	//player->Recoil = 0;
-	//player->shield = 1337;
-	//player->grenade = 99;
+	player->health = 7002;
+	player->mtpReserve = 1000;
+	player->Recoil = 0;
+	player->shield = 1337;
+	player->grenade = 99;
 
 	GetInput();
 }
