@@ -4,6 +4,5 @@
 #include "setupHooksAndNops.h"
 #include "GetsAndInputs.h"
 
-extern PlayerInfo* player;
 
 void MainHackLoop();

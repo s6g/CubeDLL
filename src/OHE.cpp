@@ -6,7 +6,6 @@
 #define healthOffset 0x4
 
 int myTeam = 5;
-int harvestDone = 0;
 
 /*
 This function changes the in-game damage function to force one-hit eliminations on enemies
@@ -22,6 +21,27 @@ void __declspec(naked)OneHitEliminate()
 	__asm
 	{
 	code:
+		mov eax, edi //Stolen Bytes
+
+		push ecx
+		mov ecx, [myTeam]
+		cmp [ebx + TeamOffset], ecx
+		je returnJump
+		mov ecx, [ebx + healthOffset]
+		sub [ebx + healthOffset], ecx
+		pop ecx
+		jmp returnJump
+
+
+	returnJump:
+		jmp OneHitEliminateDetour.returnJumpDetour
+	}
+}
+
+/*
+__asm
+	{
+	code:
 		mov eax,edi //stolen Bytes
 
 		cmp [ebx + playerNumberOffset], 0x0 //am i me?
@@ -30,7 +50,7 @@ void __declspec(naked)OneHitEliminate()
 
 	teamcheck:
 		push ecx //using this register cuz itts nott ussed anywheree
-		mov ecx, [ebx + TeamOffset] //take  my team, 
+		mov ecx, [ebx + TeamOffset] //take  my team,
 		cmp ecx, [myTeam] //and compare it with the global variable
 		pop ecx //thank you
 		jne harvest //if it doesnt equal, meaning we didnt check your team before
@@ -64,7 +84,7 @@ void __declspec(naked)OneHitEliminate()
 		pop ecx //thank you
 		jmp cont //now go back
 
-	returnJump:	
+	returnJump:
 		jmp OneHitEliminateDetour.returnJumpDetour // A JUMP to the normal flow of execution
 	}
-}
+*/
