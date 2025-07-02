@@ -10,10 +10,12 @@ void PrintConsole()
 	std::cout << "Press F1 To Infinite Ammo\n";
 	std::cout << "Press F2 To No Recoil\n";
 	std::cout << "Press F3 To OneHit Enemies\n";
+	std::cout << "Press F4 To FULL Everything\n";
 	std::cout << "------------------------------------------------------\n";
 	std::cout << "Infinite Ammo: " << (nopAmmo.bActive ? COLORS::GREEN:COLORS::RED) << (nopAmmo.bActive ? "Active" : "Not Active") << COLORS::RESET << "\n";
 	std::cout << "Recoil: " << (nopRecoil.bActive ? COLORS::GREEN : COLORS::RED) << (nopRecoil.bActive ? "Active" : "Not Active") << COLORS::RESET << std::endl;
 	std::cout << "OHE: " << (OneHitEliminateDetour.bActive ? COLORS::GREEN : COLORS::RED) << (OneHitEliminateDetour.bActive ? "Active" : "Not Active") << COLORS::RESET << std::endl;
+	std::cout << "selector: " << *selector;
 }
 
 void GetInput()
@@ -43,6 +45,11 @@ void GetInput()
 		PrintConsole();
 	}
 
+	if (GetAsyncKeyState(VK_F4) & 1)
+	{
+		editPlayer();
+		PrintConsole();
+	}
 }
 
 void BreakHack()

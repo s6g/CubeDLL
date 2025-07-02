@@ -157,6 +157,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Globals.cpp" />
     <ClCompile Include="src\OHE.cpp" />
     <ClCompile Include="src\GetsAndInputs.cpp" />
     <ClCompile Include="src\Hooks.cpp" />
@@ -169,6 +170,7 @@
     <ClCompile Include="src\setupHooksAndNops.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\Globals.h" />
     <ClInclude Include="include\ConsoleColors.h" />
     <ClInclude Include="include\GetsAndInputs.h" />
     <ClInclude Include="include\framework.h" />

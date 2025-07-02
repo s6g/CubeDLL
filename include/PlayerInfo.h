@@ -1,5 +1,5 @@
- #pragma once
-
+#pragma once
+#include "iostream"
 class PlayerInfo
 {
 public:
@@ -55,7 +55,10 @@ public:
 	int32_t akimboFireRate; //0x0184
 	char pad_0188[4]; //0x0188
 	int32_t mkFireRate; //0x018C
-	char pad_0190[540]; //0x0190
-	int32_t varTeam; //0x03AC
-	char pad_03B0[4404]; //0x03B0
+	char pad_0190[72]; //0x0190
+	int32_t N000000C5; //0x01D8
+	char pad_01DC[336]; //0x01DC
+	int32_t varTeam; //0x032C
+	char pad_0330[4532]; //0x0330
 }; //Size: 0x14E4
+

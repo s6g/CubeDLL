@@ -23,6 +23,9 @@
     <Filter Include="One Hit Elimination">
       <UniqueIdentifier>{db1de855-f93a-4b0b-9449-6a8ac3dc4994}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Globals">
+      <UniqueIdentifier>{9262cfb2-79a1-458b-bd08-d90a84aad660}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Hooks.cpp">
@@ -45,6 +48,9 @@
     </ClCompile>
     <ClCompile Include="src\OHE.cpp">
       <Filter>One Hit Elimination</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Globals.cpp">
+      <Filter>Globals</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -72,6 +78,9 @@
     <ClInclude Include="include\ConsoleColors.h" />
     <ClInclude Include="include\OHE.h">
       <Filter>One Hit Elimination</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Globals.h">
+      <Filter>Globals</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
