@@ -36,6 +36,7 @@ void GetInput()
 	if (GetAsyncKeyState(VK_F2) & 1)
 	{
 		nopRecoil.ToggleNop();  //Stops Movement When Shooting
+		noprecoil.ToggleNop();
 		PrintConsole();
 	}
 
@@ -50,6 +51,7 @@ void GetInput()
 		editPlayer();
 		PrintConsole();
 	}
+	
 }
 
 void BreakHack()
@@ -73,6 +75,7 @@ void ToggleConsole()
 	{ 
 		AllocConsole();
 		freopen_s(&f, "CONOUT$", "w", stdout); //file pointer address, -, write permission, print output
+		SetConsoleTitleA("yolk");
 	}
 
 	if (!bActive)

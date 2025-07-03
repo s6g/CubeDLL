@@ -5,6 +5,7 @@ Hook mainHackLoopTramp;
 Hook OneHitEliminateDetour;
 Nop nopAmmo;
 Nop nopRecoil;
+Nop noprecoil;
 
 void SetupHooksAndNops()
 {
@@ -23,9 +24,12 @@ void SetupHooksAndNops()
 	Nop nopAmmoTemp(nopAmmoDst, 2);
 	nopAmmo = nopAmmoTemp;
 
-	//ac_client.exe+62223E 18 BYTE
-	BYTE* nopRecoilDst = moduleBaseAssaultCube + 0x6223E; //Good
-	Nop nopRecoilTemp(nopRecoilDst, 18);
+	BYTE* nopRecoilDst = moduleBaseAssaultCube + 0x6370D; //Good
+	Nop nopRecoilTemp(nopRecoilDst, 3);
 	nopRecoil = nopRecoilTemp;
-	
+		
+	BYTE* noprecoilDst = moduleBaseAssaultCube + 0x5BAB6; //Good
+	Nop noprecoilTemp(noprecoilDst, 2);
+	noprecoil = noprecoilTemp;
+
 }

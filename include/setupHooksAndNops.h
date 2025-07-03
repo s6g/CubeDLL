@@ -7,5 +7,6 @@ extern Hook mainHackLoopTramp;
 extern Hook OneHitEliminateDetour;
 extern Nop nopAmmo;
 extern Nop nopRecoil;
+extern Nop noprecoil;
 
 void SetupHooksAndNops();
