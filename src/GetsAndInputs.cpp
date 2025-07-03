@@ -13,7 +13,7 @@ void PrintConsole()
 	std::cout << "Press F4 To FULL Everything\n";
 	std::cout << "------------------------------------------------------\n";
 	std::cout << "Infinite Ammo: " << (nopAmmo.bActive ? COLORS::GREEN:COLORS::RED) << (nopAmmo.bActive ? "Active" : "Not Active") << COLORS::RESET << "\n";
-	std::cout << "Recoil: " << (nopRecoil.bActive ? COLORS::GREEN : COLORS::RED) << (nopRecoil.bActive ? "Active" : "Not Active") << COLORS::RESET << std::endl;
+	std::cout << "Recoil: " << (nopRecoil[0].bActive ? COLORS::GREEN : COLORS::RED) << (nopRecoil[0].bActive ? "Active" : "Not Active") << COLORS::RESET << std::endl;
 	std::cout << "OHE: " << (OneHitEliminateDetour.bActive ? COLORS::GREEN : COLORS::RED) << (OneHitEliminateDetour.bActive ? "Active" : "Not Active") << COLORS::RESET << std::endl;
 	std::cout << "selector: " << *selector;
 }
@@ -35,8 +35,8 @@ void GetInput()
 
 	if (GetAsyncKeyState(VK_F2) & 1)
 	{
-		nopRecoil.ToggleNop();  //Stops Movement When Shooting
-		noprecoil.ToggleNop();
+		nopRecoil[0].ToggleNop();
+		nopRecoil[1].ToggleNop();
 		PrintConsole();
 	}
 
@@ -59,7 +59,7 @@ void BreakHack()
 	bBreakHackThreadWhileLoop = true;
 	
 	if (nopAmmo.bActive) { nopAmmo.ToggleNop(); }
-	if (nopRecoil.bActive) { nopRecoil.ToggleNop(); }
+	if (nopRecoil[0].bActive) { nopRecoil[0].ToggleNop(); nopRecoil[1].ToggleNop();}
 	if (OneHitEliminateDetour.bActive) { OneHitEliminateDetour.ToogleDetour(); }
 }
 
