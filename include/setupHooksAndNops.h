@@ -6,7 +6,7 @@
 
 extern Hook mainHackLoopTramp;
 extern Hook OneHitEliminateDetour;
-extern Hook stopRecoilDetourX;
+extern Hook stopRecoilDetour;
 
 extern Nop nopAmmo;
 extern Nop nopRecoil[2];

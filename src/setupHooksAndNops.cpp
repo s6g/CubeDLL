@@ -3,11 +3,7 @@
 
 Hook mainHackLoopTramp;
 Hook OneHitEliminateDetour;
-
-Hook stopRecoilDetourX;
-Hook stopRecoilDetourY;
-Hook stopRecoilDetourZ;
-
+Hook stopRecoilDetour;
 Nop nopAmmo;
 Nop nopRecoil[2];
 
@@ -27,7 +23,7 @@ void SetupHooksAndNops()
 
 	BYTE* stopRecoilDst = moduleBaseAssaultCube + 0x6223E;
 	Hook stopRecoilTempX(stopRecoilDst, (BYTE*)stopRecoilX, 18);
-	stopRecoilDetourX = stopRecoilTempX;
+	stopRecoilDetour = stopRecoilTempX;
 
 	BYTE* nopAmmoDst = moduleBaseAssaultCube + 0x637E9;
 	Nop nopAmmoTemp(nopAmmoDst, 2);

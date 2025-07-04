@@ -13,7 +13,7 @@ void __declspec(naked)stopRecoilX()
 		fstp dword ptr [tempY]
 		fadd dword ptr [tempZ]
 		fstp dword ptr [tempZ]
-		jmp stopRecoilDetourX.returnJumpDetour
+		jmp stopRecoilDetour.returnJumpDetour
 	}
 }
 
