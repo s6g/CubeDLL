@@ -30,6 +30,7 @@ struct Hook
 
 	Hook(BYTE* hookPosition, BYTE* desiredFunction, int lengthOfHook);
 	Hook();
+	~Hook();
 	
 };
 

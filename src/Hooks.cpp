@@ -23,6 +23,11 @@ Hook::Hook()
 
 }
 
+Hook::~Hook()
+{
+
+}
+
 void Hook::ToggleTrampSBF()
 {
 	bActive = !bActive;

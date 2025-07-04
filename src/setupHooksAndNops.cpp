@@ -3,6 +3,11 @@
 
 Hook mainHackLoopTramp;
 Hook OneHitEliminateDetour;
+
+Hook stopRecoilDetourX;
+Hook stopRecoilDetourY;
+Hook stopRecoilDetourZ;
+
 Nop nopAmmo;
 Nop nopRecoil[2];
 
@@ -16,19 +21,23 @@ void SetupHooksAndNops()
 	Hook MainHackLoopTrampTemp(mainHackLoopHookDst, (BYTE*)MainHackLoop, 5);
 	mainHackLoopTramp = MainHackLoopTrampTemp;
 
-	BYTE* OneHitEliminateDst = (moduleBaseAssaultCube + 0x29D1F);
+	BYTE* OneHitEliminateDst = moduleBaseAssaultCube + 0x29D1F;
 	Hook OneHitEliminateDetourTemp(OneHitEliminateDst, (BYTE*)OneHitEliminate, 5);
 	OneHitEliminateDetour = OneHitEliminateDetourTemp;
+
+	BYTE* stopRecoilDst = moduleBaseAssaultCube + 0x6223E;
+	Hook stopRecoilTempX(stopRecoilDst, (BYTE*)stopRecoilX, 18);
+	stopRecoilDetourX = stopRecoilTempX;
 
 	BYTE* nopAmmoDst = moduleBaseAssaultCube + 0x637E9;
 	Nop nopAmmoTemp(nopAmmoDst, 2);
 	nopAmmo = nopAmmoTemp;
 
-	BYTE* nopRecoilDst = moduleBaseAssaultCube + 0x6370D; //Good
+	BYTE* nopRecoilDst = moduleBaseAssaultCube + 0x6370D; 
 	Nop nopRecoilTemp(nopRecoilDst, 3);
 	nopRecoil[0] = nopRecoilTemp;
 		
-	BYTE* noprecoilDst = moduleBaseAssaultCube + 0x5BAB6; //Good
+	BYTE* noprecoilDst = moduleBaseAssaultCube + 0x5BAB6; 
 	Nop noprecoilTemp(noprecoilDst, 2);
 	nopRecoil[1] = noprecoilTemp;
 

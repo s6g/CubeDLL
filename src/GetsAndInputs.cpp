@@ -37,6 +37,7 @@ void GetInput()
 	{
 		nopRecoil[0].ToggleNop();
 		nopRecoil[1].ToggleNop();
+		stopRecoilDetourX.ToogleDetour();
 		PrintConsole();
 	}
 
@@ -59,7 +60,7 @@ void BreakHack()
 	bBreakHackThreadWhileLoop = true;
 	
 	if (nopAmmo.bActive) { nopAmmo.ToggleNop(); }
-	if (nopRecoil[0].bActive) { nopRecoil[0].ToggleNop(); nopRecoil[1].ToggleNop();}
+	if (nopRecoil[0].bActive) { nopRecoil[0].ToggleNop(); nopRecoil[1].ToggleNop(); stopRecoilDetourX.ToogleDetour(); }
 	if (OneHitEliminateDetour.bActive) { OneHitEliminateDetour.ToogleDetour(); }
 }
 

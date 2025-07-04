@@ -26,6 +26,9 @@
     <Filter Include="Globals">
       <UniqueIdentifier>{9262cfb2-79a1-458b-bd08-d90a84aad660}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Stop Recoil">
+      <UniqueIdentifier>{aee204f8-2e95-4717-88f7-4983289150e8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Hooks.cpp">
@@ -51,6 +54,9 @@
     </ClCompile>
     <ClCompile Include="src\Globals.cpp">
       <Filter>Globals</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stopRecoil.cpp">
+      <Filter>Stop Recoil</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -81,6 +87,9 @@
     </ClInclude>
     <ClInclude Include="include\Globals.h">
       <Filter>Globals</Filter>
+    </ClInclude>
+    <ClInclude Include="include\stopRecoil.h">
+      <Filter>Stop Recoil</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
